@@ -1,4 +1,4 @@
-FROM gcc:10
+FROM gcc:9
 LABEL org.opencontainers.image.source=https://github.com/vsysoev/gcc-cmake-gdb
 
 ARG DEBIAN_FRONTEND=noninteractive
