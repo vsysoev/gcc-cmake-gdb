@@ -2,9 +2,9 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ gcc-12 ]
   pull_request:
-    branches: [ main ]
+    branches: [ gcc-12 ]
 
 jobs:
 
@@ -23,5 +23,5 @@ jobs:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
         password: ${{ secrets.PACKAGE_TOKEN }}
-    - name: Publish the latest Docker image 
+    - name: Publish the latest Docker image
       run: docker push ghcr.io/vsysoev/gcc-cmake-gdb:latest
